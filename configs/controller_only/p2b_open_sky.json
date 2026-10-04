@@ -1,0 +1,96 @@
+{
+  "experiment_id": "TALOS-P2B",
+  "experiment_type": "controller_only",
+  "description": "Phase 2B: Open-Sky NEAT topological evolution on fixed standard PyFlyt airframe over 300 generations with an unconstrained 1000m flight arena.",
+  "random_seed": 42,
+  "num_seeds": 1,
+
+  "simulation": {
+    "env_id": "PyFlyt/Fixedwing-Waypoints-v3",
+    "episode_duration": 10.0,
+    "timestep": 0.005,
+    "control_hz": 30,
+    "physics_hz": 240,
+    "render_mode": null,
+    "num_episodes_per_eval": 1,
+    "flight_dome_size": 1000.0
+  },
+
+  "controller": {
+    "type": "neat",
+    "mode": -1,
+    "num_inputs": 15,
+    "num_outputs": 6,
+    "activation": "tanh",
+    "output_activation": "sigmoid",
+    "input_names": [
+      "ang_vel_p",
+      "ang_vel_q",
+      "ang_vel_r",
+      "roll",
+      "pitch",
+      "yaw",
+      "lin_vel_u",
+      "lin_vel_v",
+      "lin_vel_w",
+      "pos_x",
+      "pos_y",
+      "pos_z",
+      "waypoint_dx",
+      "waypoint_dy",
+      "waypoint_dz"
+    ],
+    "output_names": [
+      "left_aileron",
+      "right_aileron",
+      "elevator",
+      "rudder",
+      "main_wing_flap",
+      "thrust"
+    ]
+  },
+
+  "morphology": {
+    "enabled": false,
+    "airframe": "pyflyt_default_fixedwing",
+    "wingspan": 1.80,
+    "wing_area": 0.45,
+    "total_mass": 1.50
+  },
+
+  "neat_config": {
+    "fitness_criterion": "max",
+    "fitness_threshold": 150.0,
+    "pop_size": 50,
+    "num_generations": 300,
+    "initial_connection": "full_direct",
+    "compatibility_threshold": 3.0,
+    "conn_add_prob": 0.5,
+    "conn_delete_prob": 0.2,
+    "node_add_prob": 0.3,
+    "node_delete_prob": 0.1,
+    "weight_mutate_rate": 0.8,
+    "weight_replace_rate": 0.1,
+    "weight_max": 3.0,
+    "weight_init_std": 1.0,
+    "bias_mutate_rate": 0.7,
+    "bias_max": 3.0
+  },
+
+  "fitness": {
+    "weights": {
+      "survival": 0.4,
+      "efficiency": 0.3,
+      "maneuverability": 0.3
+    },
+    "penalties": {
+      "crash": -100.0,
+      "stall": -5.0,
+      "altitude_exceeded": -2.0
+    }
+  },
+
+  "pruning": {
+    "enabled": false
+  }
+}

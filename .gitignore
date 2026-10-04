@@ -1,0 +1,34 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Experiment outputs (regenerated)
+output/
+models/
+
+# Virtual environments and local binaries
+.venv/
+venv/
+env/
+conda_env/
+bin/
+python.cmd
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,66 @@
+horizontal_tail_params:
+  Cd_0: 0.01
+  Cl_alpha_2D: 6.283
+  alpha_0_base: 0
+  alpha_stall_N_base: -9
+  alpha_stall_P_base: 9
+  chord: 0.19999999776482583
+  deflection_limit: 20
+  eta: 0.65
+  flap_to_chord: 0.3
+  span: 0.5999999932944774
+  tau: 0.05
+left_wing_flapped_params:
+  Cd_0: 0.01
+  Cl_alpha_2D: 6.283
+  alpha_0_base: -2
+  alpha_stall_N_base: -9
+  alpha_stall_P_base: 14
+  chord: 0.27999999523162844
+  deflection_limit: 30
+  eta: 0.65
+  flap_to_chord: 0.3
+  span: 0.375
+  tau: 0.05
+main_wing_params:
+  Cd_0: 0.01
+  Cl_alpha_2D: 6.283
+  alpha_0_base: -2
+  alpha_stall_N_base: -9
+  alpha_stall_P_base: 14
+  chord: 0.27999999523162844
+  deflection_limit: 0
+  eta: 0.65
+  flap_to_chord: 0.3
+  span: 1.75
+  tau: 0.05
+motor_params:
+  noise_ratio: 0.02
+  tau: 0.01
+  thrust_coef: 3.16e-10
+  torque_coef: 7.94e-12
+  total_thrust: 21.582000467777252
+right_wing_flapped_params:
+  Cd_0: 0.01
+  Cl_alpha_2D: 6.283
+  alpha_0_base: -2
+  alpha_stall_N_base: -9
+  alpha_stall_P_base: 14
+  chord: 0.27999999523162844
+  deflection_limit: 30
+  eta: 0.65
+  flap_to_chord: 0.3
+  span: 0.375
+  tau: 0.05
+vertical_tail_params:
+  Cd_0: 0.01
+  Cl_alpha_2D: 6.283
+  alpha_0_base: 0
+  alpha_stall_N_base: -9
+  alpha_stall_P_base: 9
+  chord: 0.24494897914501662
+  deflection_limit: 20
+  eta: 0.65
+  flap_to_chord: 0.3
+  span: 0.36742346871752496
+  tau: 0.05

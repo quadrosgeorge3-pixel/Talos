@@ -1,0 +1,35 @@
+{
+  "Test A - Open-Sky Straight Flight": {
+    "flight_time": 1.0333333333333332,
+    "distance": 22.31957526235415,
+    "mean_airspeed": 21.599588963568536,
+    "mean_altitude": 5.90605420854606,
+    "max_lateral_deviation": 4.352263544025576,
+    "control_energy": 0.7333333333333333,
+    "crashed": true,
+    "stalling": true,
+    "waypoints_hit": 0
+  },
+  "Test B - Open-Sky Waypoint Course": {
+    "flight_time": 1.0333333333333332,
+    "distance": 23.99097814490558,
+    "mean_airspeed": 23.217075624102183,
+    "mean_altitude": 5.892200038634268,
+    "max_lateral_deviation": 6.580993397779081,
+    "control_energy": 0.9998282869346368,
+    "crashed": true,
+    "stalling": true,
+    "waypoints_hit": 0
+  },
+  "Test C - Aggressive Aero Slalom": {
+    "flight_time": 1.0333333333333332,
+    "distance": 24.464743408471918,
+    "mean_airspeed": 23.67555813723089,
+    "mean_altitude": 5.928079662065386,
+    "max_lateral_deviation": 4.965627006941108,
+    "control_energy": 1.0,
+    "crashed": true,
+    "stalling": false,
+    "waypoints_hit": 0
+  }
+}

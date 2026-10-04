@@ -1,0 +1,47 @@
+{
+  "Test A - Open-Sky Straight Flight": {
+    "flight_time": 20.0,
+    "distance": 1148.4,
+    "mean_airspeed": 57.4,
+    "waypoints_hit": 3,
+    "num_waypoints": 0,
+    "crashed": true,
+    "precision_score": 50.0
+  },
+  "Test B - Open-Sky Waypoint Course": {
+    "flight_time": 15.93,
+    "distance": 985.9,
+    "mean_airspeed": 61.9,
+    "waypoints_hit": 4,
+    "num_waypoints": 4,
+    "crashed": false,
+    "precision_score": 70.0
+  },
+  "Test C - Aggressive Aero Slalom": {
+    "flight_time": 25.0,
+    "distance": 1601.8,
+    "mean_airspeed": 64.1,
+    "waypoints_hit": 2,
+    "num_waypoints": 4,
+    "crashed": true,
+    "precision_score": 25.0
+  },
+  "Test D - AUVSI SUAS Autonomous Challenge": {
+    "flight_time": 15.77,
+    "distance": 1008.9,
+    "mean_airspeed": 64.0,
+    "waypoints_hit": 4,
+    "num_waypoints": 5,
+    "crashed": true,
+    "precision_score": 47.4
+  },
+  "Test E - FAI F3D/F5D Pylon Racing": {
+    "flight_time": 32.57,
+    "distance": 2175.1,
+    "mean_airspeed": 66.8,
+    "waypoints_hit": 2,
+    "num_waypoints": 9,
+    "crashed": true,
+    "precision_score": 11.1
+  }
+}

@@ -1,0 +1,72 @@
+{
+    "experiment_id": "B0_baseline_pid",
+    "experiment_type": "baseline",
+    "description": "PyFlyt built-in PID controller on the default fixedwing airframe. This is the reference condition all evolved controllers must beat.",
+    "random_seed": 42,
+    "num_seeds": 1,
+
+    "simulation": {
+        "env_id": "PyFlyt/Fixedwing-Waypoints-v3",
+        "episode_duration": 10.0,
+        "timestep": 0.005,
+        "control_hz": 120,
+        "physics_hz": 240,
+        "render_mode": null,
+        "num_episodes_per_eval": 3
+    },
+
+    "controller": {
+        "mode": 0,
+        "num_inputs": 15,
+        "num_outputs": 6,
+        "activation": "tanh",
+        "output_activation": "sigmoid",
+        "placeholder": true
+    },
+
+    "morphology": {
+        "enabled": false,
+        "bounds": {
+            "wingspan": [0.8, 3.0],
+            "wing_area": [0.15, 1.5],
+            "h_tail_area": [0.02, 0.4],
+            "v_tail_area": [0.02, 0.3],
+            "thrust_to_weight": [0.4, 1.5],
+            "total_mass": [0.8, 5.0],
+            "cg_x_offset": [-0.05, 0.15]
+        }
+    },
+
+    "neat_config": {
+        "fitness_criterion": "max",
+        "pop_size": 50,
+        "compatibility_threshold": 3.0,
+        "conn_add_prob": 0.5,
+        "conn_delete_prob": 0.2,
+        "node_add_prob": 0.3,
+        "node_delete_prob": 0.1,
+        "weight_mutate_rate": 0.8,
+        "weight_replace_rate": 0.1,
+        "weight_max": 3.0,
+        "weight_init_std": 1.0,
+        "bias_mutate_rate": 0.7,
+        "bias_max": 3.0
+    },
+
+    "fitness": {
+        "weights": {
+            "survival": 0.4,
+            "efficiency": 0.3,
+            "maneuverability": 0.3
+        },
+        "penalties": {
+            "crash": -100.0,
+            "stall": -5.0,
+            "altitude_exceeded": -2.0
+        }
+    },
+
+    "pruning": {
+        "enabled": false
+    }
+}

@@ -1,0 +1,14 @@
+# Core simulation
+pyflyt>=0.29.0
+neat-python>=0.92
+numpy>=1.24
+pyyaml>=6.0
+
+# Visualization
+matplotlib>=3.7
+
+# Progress
+tqdm>=4.65
+
+# Optional: Enhanced dashboard
+# pyqt5>=5.15  # Uncomment for PyQt5 dashboard backend

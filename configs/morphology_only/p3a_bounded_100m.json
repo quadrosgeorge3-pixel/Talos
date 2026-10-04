@@ -1,0 +1,72 @@
+{
+  "experiment_id": "TALOS-P3A",
+  "experiment_type": "morphology_only",
+  "description": "Phase 3A: Bounded Morphology Evolution in 100m dome with fixed reference PID autopilot over 100 generations.",
+  "random_seed": 42,
+  "num_seeds": 1,
+  "simulation": {
+    "env_id": "PyFlyt/Fixedwing-Waypoints-v3",
+    "episode_duration": 10.0,
+    "timestep": 0.005,
+    "control_hz": 30,
+    "physics_hz": 240,
+    "render_mode": null,
+    "num_episodes_per_eval": 1,
+    "flight_dome_size": 100.0
+  },
+  "pilot": {
+    "type": "fixed_pid",
+    "dome_radius": 100.0,
+    "target_airspeed": 22.0,
+    "target_altitude": 10.0
+  },
+  "morphology_evolution": {
+    "pop_size": 50,
+    "num_generations": 100,
+    "elitism": 2,
+    "crossover_rate": 0.7,
+    "mutation_rate": 0.3,
+    "tournament_size": 3,
+    "bounds": {
+      "wingspan": [
+        0.8,
+        3.0
+      ],
+      "wing_area": [
+        0.15,
+        1.5
+      ],
+      "h_tail_area": [
+        0.02,
+        0.4
+      ],
+      "v_tail_area": [
+        0.02,
+        0.3
+      ],
+      "thrust_to_weight": [
+        0.4,
+        1.5
+      ],
+      "total_mass": [
+        0.8,
+        5.0
+      ],
+      "cg_x_offset": [
+        -0.05,
+        0.15
+      ]
+    }
+  },
+  "fitness": {
+    "weights": {
+      "survival": 0.4,
+      "efficiency": 0.3,
+      "maneuverability": 0.3
+    },
+    "penalties": {
+      "crash": -100.0,
+      "stall": -5.0
+    }
+  }
+}

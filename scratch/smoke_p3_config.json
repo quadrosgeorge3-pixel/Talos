@@ -1,0 +1,35 @@
+{
+  "experiment_id": "SMOKE-P3",
+  "experiment_type": "morphology_only",
+  "simulation": {
+    "env_id": "PyFlyt/Fixedwing-Waypoints-v3",
+    "episode_duration": 1.0,
+    "control_hz": 30,
+    "physics_hz": 240,
+    "flight_dome_size": 100.0
+  },
+  "pilot": {
+    "type": "fixed_pid",
+    "target_airspeed": 22.0,
+    "target_altitude": 10.0
+  },
+  "morphology_evolution": {
+    "pop_size": 2,
+    "num_generations": 1,
+    "elitism": 1,
+    "crossover_rate": 0.5,
+    "mutation_rate": 0.3,
+    "tournament_size": 2
+  },
+  "fitness": {
+    "weights": {
+      "survival": 0.4,
+      "efficiency": 0.3,
+      "maneuverability": 0.3
+    },
+    "penalties": {
+      "crash": -100.0,
+      "stall": -5.0
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "p3a_champ_pid": {
+    "Test A - Open-Sky Straight Flight": {
+      "flight_time": 20.000000000000153,
+      "distance": 727.254865970797,
+      "mean_airspeed": 36.36274329853985,
+      "mean_altitude": 16.84624141074558,
+      "max_lateral_deviation": 322.86602114623264,
+      "control_energy": 5.3997836673110156,
+      "crashed": false,
+      "stalling": false,
+      "waypoints_hit": 0
+    },
+    "Test B - Open-Sky Waypoint Course": {
+      "flight_time": 25.0000000000004,
+      "distance": 934.9670243752105,
+      "mean_airspeed": 37.39868097500842,
+      "mean_altitude": 17.741986746080794,
+      "max_lateral_deviation": 138.23498294424581,
+      "control_energy": 6.652614851078086,
+      "crashed": false,
+      "stalling": false,
+      "waypoints_hit": 0
+    },
+    "Test C - Aggressive Aero Slalom": {
+      "flight_time": 25.0000000000004,
+      "distance": 937.944226268349,
+      "mean_airspeed": 37.51776905073395,
+      "mean_altitude": 16.51707762353505,
+      "max_lateral_deviation": 507.0231400497726,
+      "control_energy": 6.648354213823051,
+      "crashed": false,
+      "stalling": false,
+      "waypoints_hit": 0
+    }
+  },
+  "p3a_champ_neat_gen300": {
+    "Test A - Open-Sky Straight Flight": {
+      "flight_time": 20.000000000000153,
+      "distance": 397.60676025769385,
+      "mean_airspeed": 19.880338012884696,
+      "mean_altitude": 35.97951100331823,
+      "max_lateral_deviation": 205.53889648405706,
+      "control_energy": 4.513272462571979,
+      "crashed": false,
+      "stalling": true,
+      "waypoints_hit": 0
+    },
+    "Test B - Open-Sky Waypoint Course": {
+      "flight_time": 25.0000000000004,
+      "distance": 852.2425658381592,
+      "mean_airspeed": 34.089702633526365,
+      "mean_altitude": 25.944214655163222,
+      "max_lateral_deviation": 42.00578738347973,
+      "control_energy": 12.296526618355758,
+      "crashed": true,
+      "stalling": true,
+      "waypoints_hit": 0
+    },
+    "Test C - Aggressive Aero Slalom": {
+      "flight_time": 1.5333333333333348,
+      "distance": 36.94742659245988,
+      "mean_airspeed": 24.096147777691225,
+      "mean_altitude": 7.005788970021449,
+      "max_lateral_deviation": 8.04916072529139,
+      "control_energy": 0.8029385417079316,
+      "crashed": true,
+      "stalling": false,
+      "waypoints_hit": 0
+    }
+  }
+}

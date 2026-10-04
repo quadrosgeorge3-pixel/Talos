@@ -1,0 +1,109 @@
+{
+  "experiment_id": "TALOS-P4-TESTAROSSA",
+  "experiment_type": "coevolution",
+  "description": "Phase 4 Fork (from Gen 325 rocket): TALOS-P4-TESTAROSSA. Unified single-track Grand Prix circuit: 500m straight sprint -> broad turn -> slalom -> 180 pylon hairpin -> 500m final return straightaway. Speed-scaled gate rewards, instant-zero crash penalty, 100-generation dedicated run.",
+  "random_seed": 42,
+  "num_seeds": 1,
+
+  "simulation": {
+    "env_id": "PyFlyt/Fixedwing-Waypoints-v3",
+    "episode_duration": 40.0,
+    "timestep": 0.005,
+    "control_hz": 30,
+    "physics_hz": 240,
+    "render_mode": null,
+    "num_episodes_per_eval": 1,
+    "flight_dome_size": 1500.0
+  },
+
+  "controller": {
+    "type": "neat",
+    "mode": -1,
+    "num_inputs": 15,
+    "num_outputs": 6,
+    "activation": "tanh",
+    "output_activation": "sigmoid",
+    "input_names": [
+      "ang_vel_p",
+      "ang_vel_q",
+      "ang_vel_r",
+      "roll",
+      "pitch",
+      "yaw",
+      "lin_vel_u",
+      "lin_vel_v",
+      "lin_vel_w",
+      "pos_x",
+      "pos_y",
+      "pos_z",
+      "waypoint_dx",
+      "waypoint_dy",
+      "waypoint_dz"
+    ],
+    "output_names": [
+      "left_aileron",
+      "right_aileron",
+      "elevator",
+      "rudder",
+      "main_wing_flap",
+      "thrust"
+    ]
+  },
+
+  "morphology": {
+    "enabled": true,
+    "airframe": "pyflyt_default_fixedwing",
+    "mutation_rate": 0.3,
+    "crossover_rate": 0.7,
+    "bounds": {
+      "wingspan": [0.8, 3.0],
+      "wing_area": [0.15, 1.50],
+      "h_tail_area": [0.08, 0.40],
+      "v_tail_area": [0.02, 0.40],
+      "thrust_to_weight": [0.5, 2.0],
+      "total_mass": [0.8, 5.0],
+      "cg_x_offset": [-0.08, 0.12]
+    }
+  },
+
+  "neat_config": {
+    "fitness_criterion": "max",
+    "fitness_threshold": 800.0,
+    "pop_size": 50,
+    "num_generations": 425,
+    "initial_connection": "full_direct",
+    "compatibility_threshold": 3.0,
+    "conn_add_prob": 0.5,
+    "conn_delete_prob": 0.2,
+    "node_add_prob": 0.3,
+    "node_delete_prob": 0.1,
+    "weight_mutate_rate": 0.8,
+    "weight_replace_rate": 0.1,
+    "weight_max": 3.0,
+    "weight_init_std": 1.0,
+    "bias_mutate_rate": 0.7,
+    "bias_max": 3.0
+  },
+
+  "fitness": {
+    "weights": {
+      "survival": 0.4,
+      "efficiency": 0.3,
+      "maneuverability": 0.3
+    },
+    "penalties": {
+      "crash": -200.0,
+      "stall": -50.0
+    },
+    "benchmark_target_speed": 49.2,
+    "curriculum_milestones": {
+      "tier2_generation": 60,
+      "tier_hairpin_generation": 325,
+      "tier4_generation": 550
+    }
+  },
+
+  "pruning": {
+    "enabled": false
+  }
+}
