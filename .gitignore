@@ -32,3 +32,6 @@ python.cmd
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated Documents
+*.pdf
