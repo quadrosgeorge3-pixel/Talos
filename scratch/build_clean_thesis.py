@@ -1,4 +1,10 @@
-#set page(
+"""
+Builds the publication-grade, formal academic thesis for Project TALOS in Typst.
+Eliminates all AI tropes, sensationalism, and conversational filler.
+Produces a rigorous, AIAA/IEEE-caliber technical document with elegant aerospace styling.
+"""
+
+content = r'''#set page(
   paper: "a4",
   margin: (x: 2cm, top: 2.2cm, bottom: 2.2cm),
   header: context if here().page() > 1 [
@@ -673,3 +679,9 @@ Future extensions of this framework include:
 7. Stevens, B. L., Lewis, F. L., & Johnson, E. N. (2015). _Aircraft control and simulation: Dynamics, controls design, and autonomous systems_ (3rd ed.). John Wiley & Sons.
 8. Frankle, J., & Carbin, M. (2018). _The lottery ticket hypothesis: Finding sparse, trainable neural networks_. arXiv preprint arXiv:1803.03635.
 9. Dai, X., Yin, H., & Jha, N. K. (2017). _NeST: A neural network synthesis tool based on a grow-and-prune paradigm_. IEEE Transactions on Computers, 68(10), pp. 1487-1497.
+'''
+
+with open("docs/Project_TALOS_Thesis.typ", "w", encoding="utf-8") as f:
+    f.write(content.strip() + "\n")
+
+print("Wrote docs/Project_TALOS_Thesis.typ successfully.")
