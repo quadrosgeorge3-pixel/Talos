@@ -11,7 +11,7 @@ Most UAV neuroevolution experiments fix the aircraft geometry and train a neural
 1. **Morphology genome**: Physical airframe parameters (wingspan, wing area, horizontal and vertical tail sizing, thrust-to-weight ratio, mass, and center-of-gravity offset) converted dynamically into URDF and configuration files.
 2. **Controller genome**: A NEAT (`neat-python`) topological neural network that takes real-time flight telemetry (airspeed, pitch, climb rate, attitude errors, waypoint vectors) and outputs primary flight control commands (elevator, aileron, rudder, throttle).
 
-Simulations run headless using PyBullet through PyFlyt's fixed-wing flight dynamics model.
+
 
 ---
 
