@@ -2,6 +2,8 @@
 
 Autonomous co-evolution of fixed-wing UAV morphology and neural flight controllers in PyBullet.
 
+> **Research Monograph &amp; Thesis:** A detailed, experiment-by-experiment academic thesis is available in [`Project_TALOS_Thesis.pdf`](Project_TALOS_Thesis.pdf).
+
 ---
 
 ## Overview
